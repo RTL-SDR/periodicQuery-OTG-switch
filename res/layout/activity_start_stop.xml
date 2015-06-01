@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StartStopActivity" >
+	
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+		>
+		
+	    <Button
+	    	android:id="@+id/button_start"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="0.5"
+	        android:text="Start"
+	        android:onClick="onStart"/>
+	    <Button
+	    	android:id="@+id/button_stop"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="0.5"
+	        android:text="Stop"
+	        android:onClick="onStop"/>
+	        
+	</LinearLayout>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:padding="5dp"
+		android:layout_height="30dp"
+		android:textColor="@android:color/white"
+		android:background="#00a6d6"
+		android:text="Service"
+		/>	
+
+	<RadioGroup
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<RadioButton android:id="@+id/radio_google"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Google"
+			android:onClick="onServiceSelect"/>
+		<RadioButton android:id="@+id/radio_microsoft"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Microsoft"
+			android:onClick="onServiceSelect"/>
+		<RadioButton android:id="@+id/radio_spectrumbridge"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="SpectrumBridge"
+			android:onClick="onServiceSelect"/>
+		<RadioButton android:id="@+id/rtl_sdr"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="RtlSdr"
+			android:onClick="onServiceSelect"/>
+	</RadioGroup>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:padding="5dp"
+		android:layout_height="30dp"
+		android:textColor="@android:color/white"
+		android:background="#00a6d6"
+		android:text="Query Interval"
+		/>	
+
+	<RadioGroup
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<RadioButton android:id="@+id/radio_10s"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="10s"
+			android:onClick="onIntervalSelect"/>
+		<RadioButton android:id="@+id/radio_30s"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="30s"
+			android:onClick="onIntervalSelect"/>
+		<RadioButton android:id="@+id/radio_1m"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="1m"
+			android:onClick="onIntervalSelect"/>
+		<RadioButton android:id="@+id/radio_2m"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="2m"
+			android:onClick="onIntervalSelect"/>
+		<RadioButton android:id="@+id/radio_5m"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="5m"
+			android:onClick="onIntervalSelect"/>
+	</RadioGroup>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:padding="5dp"
+		android:layout_height="30dp"
+		android:textColor="@android:color/white"
+		android:background="#00a6d6"
+		android:text="Location"
+		/>	
+
+	<RadioGroup
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<RadioButton android:id="@+id/radio_ny"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="New York"
+			android:onClick="onLocationSelect"/>
+		<RadioButton android:id="@+id/radio_ohio"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Ohio"
+			android:onClick="onLocationSelect"/>
+	</RadioGroup>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:padding="5dp"
+		android:layout_height="30dp"
+		android:textColor="@android:color/white"
+		android:background="#00a6d6"
+		android:text="Fuzz Location"
+		/>	
+
+	<RadioGroup
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+		<RadioButton android:id="@+id/radio_nofuzz"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Off"
+			android:onClick="onLocationFuzzSelect"/>
+		<RadioButton android:id="@+id/radio_fuzz1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="+/-1/2 Degree Uniform"
+			android:onClick="onLocationFuzzSelect"/>
+	</RadioGroup>
+
+</LinearLayout>
